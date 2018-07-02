@@ -1,0 +1,118 @@
+@font-face {
+    font-family: 'citi-font';
+    font-style: normal;
+    font-size: medium;
+    src: local('citi-font'), url(http://fonts.gstatic.com/s/tangerine/v7/HGfsyCL5WASpHOFnouG-RFtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+
+header
+{
+    width:80%;
+    height:100px;
+    margin-left: 10%;
+    border:2px solid red;
+}
+
+section
+{
+    margin-left: 10%;
+    margin-top: 5%;
+    width:80%;
+    height:auto;
+    border: 2px solid blue;
+}
+
+footer
+{
+    width:80%;
+    height:100px;
+    margin-top: 2%;
+    margin-left: 10%;
+    border:2px solid green;
+}
+
+
+figure
+{
+    width:15%;
+    float:left;
+}
+
+.logo
+{
+    width:100%;
+    height:100%;
+}
+
+figcaption
+{
+    text-align: center;
+    color: blue;
+    font-size: small;
+}
+
+menu
+{
+    width:90%;
+    margin-left: 5%;
+    margin-top: 10%;
+}
+
+
+ul li
+{
+    text-decoration: none;
+    list-style: none;
+    display: inline;
+    margin-right: 2%;
+    background-color: deepskyblue;
+    color:black;
+}
+
+
+ul li:hover
+{
+    background-color: blueviolet;
+}
+
+ul a
+{
+    text-decoration: none;
+}
+
+article
+{
+    width:70%;
+    height:auto;
+
+
+}
+
+
+
+
+article p
+{
+
+     column-count: 3;
+     text-align: justify;
+    column-gap: 25px;
+    column-rule: 2px dashed red;
+    margin: 2%;
+    font-family: citi-font;
+
+}
+
+
+article p:first-letter
+{
+    font-size: xx-large;
+    color: red;
+}
+article p:first-line
+{
+    color: red;
+    font-style: italic;
+}
