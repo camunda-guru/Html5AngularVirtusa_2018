@@ -1,0 +1,83 @@
+section
+{
+    width:80%;
+    height:auto;
+    margin-left: 5%;
+
+}
+
+div#displayarea
+{
+    width:40%;
+    height:200px;
+    margin-left: 40%;
+
+}
+
+
+#maparea
+{
+    width:40%;
+    height:300px;
+    margin-top: 2%;
+
+    float:left;
+}
+#register
+{
+    width:60%;
+
+    margin-left: 30%;
+}
+
+
+form
+{
+    width:80%;
+    margin-left: 25%;
+
+
+}
+
+fieldset
+{
+    border: 2px solid darkslategray;
+    border-radius: 20px 20px 20px 20px;
+    background-color: lawngreen;
+    color: white;
+    margin-top: 5%;
+
+}
+legend
+{
+    text-align: center;
+    color: darkslategray;
+}
+
+label
+{
+    width:40%;
+    margin-right: 2%;
+    float:left;
+    color: darkslategray;
+}
+input
+{
+    width:55%;
+    margin-bottom: 2%;
+    border-radius: 20px 20px 20px 20px;
+    background-color: lightgreen;
+    font-size: small;
+
+}
+
+input[type=submit]
+{
+    width:25%;
+    margin-left: 50%;
+    background-color: darkslategray;
+    color: white;
+}
+
+input:valid{border: 2px solid green}
+input:invalid {border: 2px solid red}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="styles/membership.css">
+
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="scripts/angular-messages.js"></script>
+
+    <script src="modules/serviceModule.js"></script>
+    <script src="modules/bankingmodule.js"></script>
+    <script src="services/countryService.js"></script>
+    <script src="controllers/bankingControllers.js"></script>
+    <script src="scripts/GeoScript.js"></script>
+    <script src="scripts/imgscript.js"></script>
+    <script
+            src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDnCmx6XW6zNRAIaXIqkN8dlYElsSDNLjI&callback=initMap">
+</script>
+
+
+        </head>
+<body ng-app="BankingApp">
+
+<section>
+<div id="maparea">
+
+
+</div>
+<div id="register" ng-controller="FormController">
+<form name="regForm" ng-submit="save()">
+    <fieldset>
+    <legend>Customer Registration</legend>
+    <label for="firstName">First Name</label>
+    <input type="text" id="firstName" name="firstName" ng-model="customerObj.firstName" placeholder="Anil" required pattern="[A-Za-z]{5,25}">
+        <div ng-messages="regForm.firstName.$error">
+            <div ng-message="required">
+                First Name Required
+            </div>
+            <div ng-message="pattern">
+                First Name not matching the pattern
+            </div>
+
+        </div>
+        <label for="lastName">Last Name</label>
+    <input type="text" id="lastName" name="lastName" ng-model="customerObj.lastName" placeholder="Sharma" required>
+
+        <div ng-messages="regForm.lastName.$error">
+            <div ng-message="required">
+                Last Name Required
+            </div>
+
+
+        </div>
+        <label for="dob">DOB</label>
+    <input type="date" id="dob" ng-model="customerObj.dob" required min="2017-12-01" max="2018-08-04"/>
+    <label for="email">Email</label>
+    <input type="email" id="email" ng-model="customerObj.email" required placeholder="sample@gmail.com">
+        <label for="address">Address</label>
+        <input type="text"  id="address"  ng-model="customerObj.address" required placeholder="Chennai, TN">
+    <label for="country">Country</label>
+    <input type="text" id="country" list="countryList" ng-model="customerObj.country">
+    <label for="pincode">Pin Code</label>
+    <input type="number" id="pincode" ng-model="customerObj.pincode">
+    <label for="distance">Distance</label>
+    <input type="range" id="distance" min="5" max="100" ng-model="customerObj.distance">
+        <label for="photo">Select Image File</label>
+        <input id="photo" type="file" ng-model="customerObj.photo" multiple onchange="displayimage()">
+
+    <input type="submit" value="Register">
+    </fieldset>
+</form>
+
+    <div id="displayarea"></div>
+
+
+    <datalist id="countryList">
+        <option ng-repeat="obj in  countryInfo">
+            {{obj.name}}
+        </option>
+
+    </datalist>
+
+
+</div>
+</section>
+
+
+
+
+
+</body>
+</html>
